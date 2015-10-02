@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="singleApp">
+<head>
+	<!-- SCROLLS -->
+	<!-- load bootstrap and fontawesome via CDN -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/styles.css" />
+
+	<!-- SPELLS -->
+	<!-- load angular and angular route via CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular-route.js"></script></script>
+	<script src="js/script.js"></script>
+</head>
+<body ng-controller="mainController">
+	<!-- HEADER AND NAVBAR -->
+	<header>
+		<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/"> Angular Routing Example</a>
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#/"><i class="fa fa-home"></i> Home</a></li>
+				<li><a href="#player"><i class="fa fa-play-circle"></i> Player</a></li>
+				<li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+			</ul>
+		</div>
+		</nav>
+	</header>
+
+	<!-- MAIN CONTENT AND INJECTED VIEWS -->
+	<div id="main">
+		<!-- angular templating -->
+		<!-- this is where content will be injected -->
+		<!-- <input type="text" ng-model="person.name" placeholder="Enter your name" />
+		<h5>Hello {{ person.name }} </h5>
+		<h5>Hello {{ clock }} </h5>
+		<div ng-controller="DemoController">
+			<h4>The simplest adding machine ever</h4>
+			<button ng-click="add(1)" class="button">Add</button>
+			<button ng-click="subtract(1)" class="button">Subtract</button>
+			<h4>Current count: {{ counter }}</h4>
+		</div>
+		{{ programs }} -->
+		<div ng-view></div>
+	</div>
+
+</body>
+</html>
+

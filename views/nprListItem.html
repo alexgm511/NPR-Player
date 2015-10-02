@@ -1,0 +1,14 @@
+		<div class="nprLink row" player="player" ng-click="player.play(ngModel)">
+			<span class="name col-md-12 columns">
+				<button class="col-md-2 col-xs-2 playButton columns"><div class="triangle"></div></button>
+				<div class="col-md-10 col-xs-10 columns">
+					<div class="row">
+						<span class="col-md-12">{{ ngModel.title.$text }}<span>
+					</div>
+					<div class="row">
+						<div class="col-xs-1 columns"></div>
+						<div class="col-xs-2 columns col-xs-offset-8"><a href="{{ ngModel.link[0].$text }}">Link</a></div>
+					</div>
+				</div>
+			</span>
+		</div>

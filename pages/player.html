@@ -1,0 +1,47 @@
+<!-- player.html -->
+	<!--<div ng-controller="playerController" class="jumbotron text-center">
+		<button ng-click="play()" class="button alert" ng-show="!playing"><i class="fa fa-play"></i> Play</button>
+		<button ng-click="stop()" class="button alert" ng-show="playing"><i class="fa fa-stop"></i> Stop</button>
+
+		Playing audio: <p><b>{{ playing }} </b></p>
+		
+		<div class="text-left" style="padding-left: 25%">
+			<ul id="programs_list" class="">
+				<li ng-repeat="program in programs" ng-click="play(program)">
+					<span class="large-12">{{ program.title.$text }}</span>
+				</li>
+			</ul>
+		</div>
+		-->
+	<div class="container">
+	    <div class="row">
+	      <h1 class="text-center">NPR player</h1>
+	    </div>
+	    <div class="row">
+	    	<div class="col-md-12 col-xs-12 columns">
+				<div ng-controller="playerController">
+					<div class="container">
+						<div player-view class="col-md-12 columns col-xs-12" ng-model="player"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	    <div class="row">
+	    	<div class="col-md-8 col-xs-8 columns">
+				<h2>Available Podcasts</h2>
+				<ul id="programs_list" class="">
+					<li ng-repeat="program in programs" >
+						<span npr-link ng-model="program" player="player"></span>
+						<!-- <span npr-link play='play(program)' ng-model="program"></span> -->
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-4 col-xs-4 columns" ng-controller="RelatedController">
+			  <h2>Related content</h2>
+			  <ul id="related">
+			    <li ng-repeat="s in related"><a href="{{ s.link }}">{{ s.caption }}</a></li>
+			  </ul>
+			</div>		
+		</div>
+	</div> <!-- end container -->
