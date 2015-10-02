@@ -54,7 +54,7 @@
 				ngModel: '=',
 				player: '='
 			},
-			templateUrl: '../views/nprListItem.html',
+			templateUrl: 'views/nprListItem.html',
 			link: function(scope, ele, attr) {
 				scope.duration = scope.ngModel.audio[0].duration.$text;
 			}
@@ -145,7 +145,7 @@
 			scope: {
 				ngModel: '='
 			},
-			templateUrl: '../views/playerView.html',
+			templateUrl: 'views/playerView.html',
 			link: function(scope, iElm, iAttrs, controller) {
 				scope.$watch('ngModel.current', function(newVal) {
 					if (newVal) {
